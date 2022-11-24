@@ -9,6 +9,8 @@ updates:
     target-branch: "develop"
     labels:
       - "npm dependencies"
+    # Disable version updates for npm dependencies
+    open-pull-requests-limit: 0
       
   - package-ecosystem: "npm"
     directory: "frontend/"
@@ -19,6 +21,8 @@ updates:
     target-branch: "feature/"
     labels:
       - "npm dependencies"
+    # Disable version updates for npm dependencies
+    open-pull-requests-limit: 0
       
  
 
