@@ -144,17 +144,17 @@ func (g *Gallery) Get(profile *OctoProfile) error {
 
 	// add a SQL injection deliberately
 	// stmt, err := db.Prepare(`SELECT id, title, description FROM gallery WHERE login = ?`)
-	stmt, err := db.Query(`SELECT id, title, description FROM gallery WHERE login = $profile.Login`)
+	stmt, err := db.Prepare(fmt.Sprintf("SELECT id, title, description FROM gallery WHERE login = '%s'", profile.Login))
 	if err != nil {
 		return err
 	}
 	defer stmt.Close()
 
-	// rs, err := stmt.Query(profile.Login)
-	//if err != nil {
-	//	return err
-	//}
-	//defer rs.Close()
+	rs, err := stmt.Query(profile.Login)
+	if err != nil {
+		return err
+	}
+	defer rs.Close()
 	
 	if rs.Next() {
 		rs.Scan(&g.ID, &g.Title, &g.Description)
