@@ -6,7 +6,7 @@ updates:
       interval: "daily"
       # Check for npm updates on Sundays
     # Labels on pull requests for security and version updates
-    target-branch: "test"
+    target-branch: "Test"
     labels:
       - "npm dependencies"
     # Disable version updates for npm dependencies
@@ -28,7 +28,7 @@ updates:
     schedule:
       interval: "daily"
     # Labels on pull requests for security and version updates
-    target-branch: "test"
+    target-branch: "Test"
     labels:
       - "pip dependencies"
     # Disable version updates for npm dependencies
