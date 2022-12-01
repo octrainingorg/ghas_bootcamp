@@ -33,7 +33,7 @@ updates:
     # Disable version updates for npm dependencies
     open-pull-requests-limit: 0
     
-     - package-ecosystem: "pip"
+  - package-ecosystem: "pip"
     directory: "authn-service/"
     schedule:
       interval: "daily"
