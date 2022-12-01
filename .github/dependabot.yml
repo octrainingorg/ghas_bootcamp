@@ -6,7 +6,7 @@ updates:
       interval: "daily"
       # Check for npm updates on Sundays
     # Labels on pull requests for security and version updates
-    target-branch: "develop"
+    target-branch: "main"
     labels:
       - "npm dependencies"
     # Disable version updates for npm dependencies
@@ -16,13 +16,23 @@ updates:
     directory: "frontend/"
     schedule:
       interval: "daily"
-      # Check for npm updates on Sundays
     # Labels on pull requests for security and version updates
     target-branch: "feature/"
     labels:
       - "npm dependencies"
     # Disable version updates for npm dependencies
     open-pull-requests-limit: 0
+    
+  - package-ecosystem: "pip"
+    directory: "authn-service/"
+    schedule:
+      interval: "daily"
+    # Labels on pull requests for security and version updates
+    target-branch: "main"
+    labels:
+      - "pip dependencies"
+    # Disable version updates for npm dependencies
+    open-pull-requests-limit: 10
       
  
 
