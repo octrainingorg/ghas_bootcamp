@@ -28,7 +28,7 @@ updates:
     schedule:
       interval: "daily"
     # Labels on pull requests for security and version updates
-    target-branch: "main"
+    target-branch: "test"
     labels:
       - "pip dependencies"
     # Disable version updates for npm dependencies
