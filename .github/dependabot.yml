@@ -42,7 +42,7 @@ updates:
     labels:
       - "pip dependencies patch-1"
     # Disable version updates for npm dependencies
-    open-pull-requests-limit: 0
+    open-pull-requests-limit: 10
       
  
 
