@@ -32,6 +32,17 @@ updates:
       - "pip dependencies"
     # Disable version updates for npm dependencies
     open-pull-requests-limit: 0
+    
+     - package-ecosystem: "pip"
+    directory: "authn-service/"
+    schedule:
+      interval: "daily"
+    # Labels on pull requests for security and version updates
+    target-branch: "octrainingpers-patch-1"
+    labels:
+      - "pip dependencies patch-1"
+    # Disable version updates for npm dependencies
+    open-pull-requests-limit: 0
       
  
 
